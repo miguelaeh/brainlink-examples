@@ -42,3 +42,6 @@ next-env.d.ts
 
 # We add a simlink for easier local testing
 callback_url_reverse_proxy/
+
+# We use a symlink for convenience when testing the script tag to the node_modules js file of the brainlink lib
+public/brainlink.js
