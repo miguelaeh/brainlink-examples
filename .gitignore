@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# We add a simlink for easier local testing
+callback_url_reverse_proxy/
