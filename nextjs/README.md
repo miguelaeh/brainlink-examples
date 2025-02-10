@@ -34,7 +34,7 @@ This is a simple example of how to use BrainLink in a NextJS application.
 5. Add the BrainLink button to your application
 
     ```html
-    <BrainLinkButton />
+    <BrainLinkButton appClientId="your-brainlink-app-client-id" />
     ```
 
 6. That's all! You can now use BrainLink to perform requests with the OpenAI compatible API
