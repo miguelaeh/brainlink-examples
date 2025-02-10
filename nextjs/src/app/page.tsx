@@ -37,7 +37,7 @@ export default function ChatPage() {
     if (!openai && BrainLink.isConnected()) {
       const userAccessToken = await BrainLink.getUserToken();
       openai = new OpenAI({
-        baseURL: "http://localhost:3001/api/v1", // TODO: change this to point to https://brainlink.dev/api/v1
+        baseURL: "https://brainlink.dev/api/v1",
         apiKey: userAccessToken,
         // Required to use the OpenAI SDK in the browser.
         // Since your app is securely using the user's access token via BrainLink, it's totally safe to use the SDK on the browser.
