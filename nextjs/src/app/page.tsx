@@ -81,6 +81,12 @@ export default function ChatPage() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <Script type="module" src="/brainlink.js" crossOrigin="anonymous" />
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+        <p className="text-2xl font-bold text-gray-700">BrainLink Demo</p>
+        <p className="text-lg">BrainLink allows your users to <b>connect any AI model to your application with one click </b> and pay for what they consume without the friction of managing API keys.</p>
+        <p className="text-lg">As the application developer <b>you remain in control of the models used by your application for each task</b>, providing a <b>consistent user experience</b> for every user.</p>
+        <p className="text-lg">Forget about requesting API keys to your users, most people don{"'"}t know what they are nor how to maintain them secure.</p>
+
+        <p>Click the button below and type something on the chat bar after connecting</p>
         <BrainLinkButton />
 
         <div className="min-w-xl max-w-4xl max-h-96 space-y-3 overflow-y-auto px-3">
@@ -119,7 +125,7 @@ export default function ChatPage() {
         {error && <p className='text-red-500 bg-red-50 px-3 py-1 rounded-md'>{error}</p>}
 
         <div className="flex w-full justify-center">
-          <Link className="hover:underline bg-white shadow-md px-2 py-1 border border-gray-200 text-gray-500 font-semibold rounded-md" target="_blank" href="https://github.com/miguelaeh/offload-examples/tree/main/nextjs">Click here to see code on GitHub</Link>
+          <Link className="hover:underline bg-white shadow-md px-2 py-1 border border-gray-200 text-gray-500 font-semibold rounded-md" target="_blank" href="https://github.com/miguelaeh/brainlink-examples">Click here to find examples for different frameworks on GitHub</Link>
         </div>
       </main>
     </div>
