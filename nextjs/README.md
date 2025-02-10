@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BrainLink NextJS Example
 
-## Getting Started
+This is a simple example of how to use BrainLink in a NextJS application.
 
-First, run the development server:
+## How to add BrainLink to your NextJS application
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Install the BrainLink SDK for Single Page Applications
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    ```bash
+    npm install @brainlink/spa-sdk
+    ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Add the BrainLink button to your application
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```bash
+    npm install @brainlink/react-button
+    ```
 
-## Learn More
+3. Import the BrainLink SDK and the BrainLink button in your application
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    import * as BrainLink from "@brainlink/spa-sdk";
+    import BrainLinkButton from "@brainlink/react-button";
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Add the Script tag to your application so that BrainLink works automatically
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```html
+    <Script type="module" src="https://unpkg.com/@brainlink/spa-sdk/dist/brainlink.js" crossOrigin="anonymous" />
+    ```
 
-## Deploy on Vercel
+5. Add the BrainLink button to your application
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```html
+    <BrainLinkButton />
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+6. That's all! You can now use BrainLink to perform requests with the OpenAI compatible API
+
+    ```javascript
+    if (BrainLink.isConnected()) {
+        const userAccessToken = await BrainLink.getUserToken(); // Obtain the user's access token
+        const openai = new OpenAI({
+        baseURL: "https://brainlink.dev/api/v1",
+        apiKey: userAccessToken,
+        // Required to use the OpenAI SDK in the browser.
+        // Since your app is securely using the user's access token via BrainLink, it's totally safe to use the SDK on the browser.
+        dangerouslyAllowBrowser: true,
+        });
+    }
+    ```
+
+> IMPORTANT: The BrainLink SPA (Single Page Application) SDK is a browser-only library, so it can only be used in the browser. If you need to use BrainLink in your server, please refer to the [docs](https://brainlink.dev/docs) to see the options.
