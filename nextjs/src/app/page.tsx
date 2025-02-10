@@ -9,8 +9,6 @@ import * as BrainLink from "@brainlink/spa-sdk";
 import Script from "next/script";
 import BrainLinkButton from "@brainlink/react-button";
 
-const brainlink_version = "0.1.3"; // We use this on the Script tag to pin a version of the BrainLink SDK
-
 function LoadingIcon({ size = 20 }) {
   return (
     <svg width={size} height={size} fill="currentColor" className="mr-2 animate-spin" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +79,7 @@ export default function ChatPage() {
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <Script type="module" src={`https://unpkg.com/@brainlink/spa-sdk@${brainlink_version}/dist/brainlink.js`} crossOrigin="anonymous" />
+      <Script type="module" src={`https://unpkg.com/@brainlink/spa-sdk/dist/brainlink.js`} crossOrigin="anonymous" />
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <p className="text-2xl font-bold text-gray-700">BrainLink Demo</p>
         <p className="text-lg">BrainLink allows your users to <b>connect any AI model to your application with one click </b> and pay for what they consume without the friction of managing API keys.</p>
