@@ -2,6 +2,8 @@
 
 This is a simple example of how to use BrainLink in a NextJS application.
 
+> IMPORTANT: The BrainLink SPA (Single Page Application) SDK is a browser-only library, so it can only be used in the browser. If you need to use BrainLink in your server, please refer to the [docs](https://brainlink.dev/docs) to see the options.
+
 ## How to add BrainLink to your NextJS application
 
 1. Install the BrainLink SDK for Single Page Applications
@@ -49,5 +51,3 @@ This is a simple example of how to use BrainLink in a NextJS application.
         });
     }
     ```
-
-> IMPORTANT: The BrainLink SPA (Single Page Application) SDK is a browser-only library, so it can only be used in the browser. If you need to use BrainLink in your server, please refer to the [docs](https://brainlink.dev/docs) to see the options.
