@@ -84,11 +84,11 @@ export default function ChatPage() {
       <Script type="module" src="https://unpkg.com/@brainlink/spa-sdk/dist/brainlink.js" crossOrigin="anonymous" />
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <p className="text-2xl font-bold text-gray-700">BrainLink Demo</p>
-        <p className="text-lg">BrainLink allows your users to <b>connect any AI model to your application with one click </b> and pay for what they consume without the friction of managing API keys.</p>
-        <p className="text-lg">As the application developer <b>you remain in control of the models used by your application for each task</b>, providing a <b>consistent user experience</b> for every user.</p>
-        <p className="text-lg">Forget about requesting API keys to your users, most people don{"'"}t know what they are nor how to maintain them secure.</p>
+        <p className="text-lg">BrainLink is a one-click solution for Bring Your Own Key (BYOK) AI applications. You can integrate BrainLink in your app to allow each user pay for his inference spend.</p>
+        <p className="text-lg">As the application developer <b>you remain in control of the models used for each task</b> providing a consistent UX.</p>
+        <p className="text-lg">Most people don{"'"}t know what{"'"}s an API key, increase your conversion by integrating BrainLink.</p>
 
-        <p>Click the button below and type something on the chat bar after connecting</p>
+        <p className="text-purple-600">Click the button below and type something on the chat bar after connecting</p>
         <BrainLinkButton appClientId={brainlinkAppClientId} />
 
         <div className="min-w-xl max-w-4xl max-h-96 space-y-3 overflow-y-auto px-3">
