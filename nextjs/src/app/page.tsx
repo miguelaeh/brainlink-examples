@@ -9,7 +9,7 @@ import * as BrainLink from "@brainlink/spa-sdk";
 import Script from "next/script";
 import BrainLinkButton from "@brainlink/react-button";
 
-const brainlinkAppClientId = "42d4285c-a668-4093-84fd-bf53819a25f7";
+const brainlinkAppClientId = "58c5ee00-4799-4a0b-88dd-2ff99702a298"; // Change this by your own, this is the brainlink demo one
 
 function LoadingIcon({ size = 20 }) {
   return (
