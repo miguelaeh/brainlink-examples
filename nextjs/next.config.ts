@@ -16,6 +16,7 @@ const nextConfig: NextConfig = {
             // TODO: we should host the script to remove attack vectors
             key: 'Content-Security-Policy',
             value: `
+              script-src 'self' https://unpkg.com;
               worker-src 'self' https://unpkg.com;
             `.replace(/\s{2,}/g, ' ').trim(), // Minify the CSP string
           },
