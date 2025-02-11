@@ -81,7 +81,7 @@ export default function ChatPage() {
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <Script type="module" src="https://unpkg.com/@brainlink/spa-sdk/dist/index.js" crossOrigin="anonymous" />
+      <Script type="module" src="https://unpkg.com/@brainlink/spa-sdk/dist/index.js" crossOrigin="anonymous" strategy="afterInteractive" />
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <p className="text-2xl font-bold text-gray-700">BrainLink Demo</p>
         <p className="text-lg">BrainLink is a one-click solution for Bring Your Own Key (BYOK) AI applications. You can integrate BrainLink in your app to allow each user pay for his inference spend.</p>
