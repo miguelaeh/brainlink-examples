@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: '/', // Apply to only the / page
+        source: '/(.*)',
         headers: [
           {
             // Allow the worker to be created from the unpkg.com script. 
