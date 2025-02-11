@@ -25,12 +25,6 @@ This is a simple example of how to use BrainLink in a NextJS application.
     import BrainLinkButton from "@brainlink/react-button";
     ```
 
-4. Add the Script tag to your application so that BrainLink works automatically
-
-    ```html
-    <Script type="module" src="https://unpkg.com/@brainlink/spa-sdk/dist/index.js" crossOrigin="anonymous" />
-    ```
-
 5. Add the BrainLink button to your application
 
     ```html
