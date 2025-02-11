@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@brainlink/react-button": "^0.2.0",
-    "@brainlink/spa-sdk": "^0.2.1",
+    "@brainlink/spa-sdk": "^0.2.2",
     "next": "15.1.6",
     "openai": "^4.83.0",
     "react": "^19.0.0",
