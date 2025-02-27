@@ -56,19 +56,21 @@ export default function ChatPage() {
     }
 
     const messages = [...chatHistory, { role: "user", content: prompt }];
-    // For real apps, you should probably acumulate messages on the array instead of overriding it on every prompt
-    const completion = await openai?.chat.completions.create({
-      model: "google/gemini-2.0-flash-lite-preview-02-05:free",
-      messages: messages as ChatCompletionMessageParam[], // Ensure messages are of the correct type
-    });
+    try {
+        // For real apps, you should probably acumulate messages on the array instead of overriding it on every prompt
+        const completion = await openai?.chat.completions.create({
+          model: "google/gemini-2.0-flash-lite-preview-02-05:free",
+          messages: messages as ChatCompletionMessageParam[], // Ensure messages are of the correct type
+        });
 
-    console.log("completion", completion);
+        console.log("completion", completion);
 
-    const modelResponse = completion?.choices[0]?.message?.content || "no response received from the model";
-    setReply(modelResponse);
-    setChatHistory((prevHistory) => [...prevHistory, { role: "assistant", content: modelResponse }]);
-    setLoading(false);
-  }
+        const modelResponse = completion?.choices[0]?.message?.content || "no response received from the model";
+        setReply(modelResponse);
+        setChatHistory((prevHistory) => [...prevHistory, { role: "assistant", content: modelResponse }]);
+    } catch (e) { setError(`There was an error with your request ${JSON.stringify(e)}`);}
+        setLoading(false);
+    }
 
   // Handle send by pressing enter
   const handleEnter = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
