@@ -59,7 +59,7 @@ export default function ChatPage() {
     try {
         // For real apps, you should probably acumulate messages on the array instead of overriding it on every prompt
         const completion = await openai?.chat.completions.create({
-          model: "meta-llama/llama-4-maverick:free",
+          model: "google/gemini-2.0-flash-exp:free",
           messages: messages as ChatCompletionMessageParam[], // Ensure messages are of the correct type
         });
 
